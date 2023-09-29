@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">NewYorkTimes</string>
+    <string name="app_name">New York Times</string>
+    <string name="no_name">No Title</string>
+    <string name="internet_message">Internet is unavailable!</string>
+    <string name="no_info">-</string>
+    <string name="book_image">book image</string>
+    <string name="rank">Rank:</string>
+    <string name="publisher">Publisher:</string>
+    <string name="description_name">Description:</string>
+    <string name="author">Author:</string>
+    <string name="back">back</string>
 </resources>

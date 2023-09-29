@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homeDir">
+
+    <fragment
+        android:id="@+id/homeDir"
+        android:name="com.myapp.newyorktimes.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/toBooks"
+            app:destination="@id/booksDir"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/slide_to_right"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/homeDir" />
+    </fragment>
+    <fragment
+        android:id="@+id/booksDir"
+        android:name="com.myapp.newyorktimes.ui.books.BooksFragment"
+        android:label="fragment_books"
+        tools:layout="@layout/fragment_books" >
+        <argument
+            android:name="lists"
+            app:argType="string" />
+        <action
+            android:id="@+id/toBuy"
+            app:destination="@id/buyDir"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/slide_to_right"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/booksDir" />
+    </fragment>
+    <fragment
+        android:id="@+id/buyDir"
+        android:name="com.myapp.newyorktimes.ui.buy.BuyFragment"
+        android:label="fragment_buy"
+        tools:layout="@layout/fragment_buy" >
+        <argument
+            android:name="link"
+            app:argType="string" />
+    </fragment>
+</navigation>
